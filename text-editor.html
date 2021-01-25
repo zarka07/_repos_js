@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Text editor</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        #wrap {
+            width: 800px;
+            margin: 30px auto;
+            padding: 10px;
+            background: white;
+        }
+        
+        #radios{
+            
+            display: none;
+        }
+        p#radios{
+            width:200px;
+        }
+/*
+        button{
+            height: 20px;
+            width: 20px;
+            border-radius:2px ;
+            border-color: transparent;
+        }
+*/
+        form[name='userForm'] {
+            overflow: hidden;
+        }
+
+        #fio p {
+            border-bottom: 1px solid #aaa;
+        }
+
+        fieldset {
+            overflow: hidden;
+            margin: 15px auto;
+        }
+
+        legend {
+            color: dodgerblue;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 4px;
+        }
+
+        .left {
+            width: auto;
+            float: left;
+        }
+        .right{
+            width: 350px;
+            float:right;
+        }
+        .empty {
+            box-shadow: 1px 1px 2px #FF9999;
+        }
+
+        .normal {
+            box-shadow: none;
+        }
+
+        #forPass {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrap">
+    <fieldset>
+            <legend>Редактор сообщения</legend>
+            <form name="userForm">
+               <div class="left">
+                    <div>Введите текст</div>
+                    <textarea name="" cols="45" rows="10" value="" input type="text"  id="before" maxlength="2000"></textarea>
+                    <div><input type="button" value="Преобразовать" name="convert"></div>
+                </div>
+                <div class="right">
+                    <p><label><input type="checkbox" name="" id='bold'> Полужирный </label></p>
+                    <p><label><input type="checkbox" name="" id='italic'> Курсив </label></p>
+                    <form name="chooseColor">
+                        <p><label><input type="checkbox" name="chooseColor" id="chooseColor"> Цвет </label> </p>
+                        <p id="radios">
+                           <label><input type="radio" name="color" value="black" checked> черный </label>
+                            <label><input type="radio" name="color" value="red"> красный </label>
+                            <label><input type="radio" name="color" value="green"> зеленый </label>
+                            <label><input type="radio" name="color" value="blue"> синий </label>
+                            <label><input type="radio" name="color" value="yellow"> желтый </label> 
+                            <label><input type="radio" name="color" value="pink"> розовый </label>
+                        
+<!--
+                           <button style="background-color: aqua" value="aqua" name="button" ></button>
+                           <button style="background-color: brown" name="button" value="brown" ></button>
+                           <button style="background-color:darkorchid" name="button" value="darkorchid"></button>
+                           <button style="background-color: dodgerblue" name="button" value="dodgerblue" ></button>
+                           <button style="background-color: red" name="button" value="red" ></button>
+                           <button style="background-color: yellow" name="button" value="yellow" ></button>
+                           <button style="background-color: hotpink" name="button" value="hotpink" ></button>
+-->
+                        </p>
+                        
+                        
+                    </form>
+                </div>
+            </form>
+        </fieldset>
+        <div>
+            <legend>Ваше сообщение</legend>
+            <form name="userForm">
+                <textarea name="after" cols="45" rows="10" value="" id="after"></textarea>
+            </form>
+        </div>
+    </div>
+    <script src="text-editor.js"></script>
+</body>
+
+</html>

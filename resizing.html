@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resizing</title>
+    <style>
+        body {
+          background-image:url(img/img500.JPG);
+            background-repeat: no-repeat;
+            width:490px;
+            height: auto;
+        }
+        
+        fieldset {
+            margin: 400px auto auto 0px;
+        }
+
+        legend {
+            color: #1194ce;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+   <fieldset>
+            <legend>Выбор размера фотографии</legend>
+            <form name="chooseCat">
+                <label><input type="radio" name="cat" value="img/img100.jpg"> 100px</label>
+                <label><input type="radio" name="cat" value="img/img200.jpg"> 200px</label>
+                <label><input type="radio" name="cat" value="img/img300.jpg"> 300px</label>
+                <label><input type="radio" name="cat" value="img/img400.jpg"> 400px</label>
+                <label><input type="radio" name="cat" value="img/img500.jpg" checked > 500px</label>
+            </form>
+        </fieldset>
+        
+    <script src="resizing.js"></script>
+</body>
+</html>
